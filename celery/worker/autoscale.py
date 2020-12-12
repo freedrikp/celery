@@ -147,7 +147,7 @@ class Autoscaler(bgThread):
 
     @property
     def qty(self):
-        return len(state.reserved_requests)
+        return len(state.reserved_requests) + len(state.active_requests)
 
     @property
     def processes(self):
